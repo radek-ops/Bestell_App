@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+}
+
+
+html
+{
+    scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root
+{
+    --navbar-color: rgba(255, 128, 0);
+    --font-color-white: rgba(255, 255, 255);
+}
+
+
+header
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 116px;
+    background-color: var(--navbar-color);
+}
+
+
+nav
+{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+
+.nav-headline
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.img-logos-nav
+{
+    width: 64px;
+    height: 64px;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+}
+
+
+h1
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: var(--font-color-white);
+    text-shadow: 4px 4px 3px rgb(49, 49, 49);
+}
+
+
+main
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.main-container
+{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 16px 0 16px;
+
+}
+
+
+.main-img
+{
+    width: 1440px;
+    height: 100vh;
+    margin: 0 16px 0 16px;
+    background-image: url('./img/burger-5571385_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-color: red;
+}
+
+aside
+{}
+
+
+
+footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 116px;
+    background-color: var(--navbar-color);
+}
+
+.footer-container
+{
+    max-width: 1440px;
+    width: 100%;
+
+}
