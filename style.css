@@ -13,6 +13,12 @@ html
     box-sizing: border-box;
 }
 
+body
+{
+
+    margin: 0;
+}
+
 
 :root
 {
@@ -39,6 +45,7 @@ nav
     justify-content: space-between;
     align-items: center;
     padding: 16px;
+
 }
 
 
@@ -47,6 +54,7 @@ nav
     display: flex;
     align-items: center;
     gap: 20px;
+
 }
 
 
@@ -72,6 +80,7 @@ main
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 100Vh;
 }
 
 
@@ -81,27 +90,53 @@ main
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100vh;
-    padding: 0 16px 0 16px;
+    flex-grow: 1;
+}
 
+
+.all-sections
+{
+    object-fit: cover;
+}
+
+
+.first-sec
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    overflow: hidden;
 }
 
 
 .main-img
 {
-    width: 1440px;
-    height: 100vh;
-    margin: 0 16px 0 16px;
-    background-image: url('./img/burger-5571385_1920.jpg');
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    flex-grow: 1;
     object-fit: cover;
-    background-color: red;
+    padding: 0 16px 0 16px;
+    background-color: var(--navbar-color);
 }
+
+.img-middle
+{
+    position: absolute;
+    top: 580px;
+    display: flex;
+    justify-content: center;
+    width: 256px;
+    height: 256px;
+    border-radius: 180px;
+    background-color: var(--font-color-white);
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+}
+
+
+
 
 aside
 {}
-
 
 
 footer
@@ -113,9 +148,9 @@ footer
     background-color: var(--navbar-color);
 }
 
+
 .footer-container
 {
     max-width: 1440px;
     width: 100%;
-
 }
