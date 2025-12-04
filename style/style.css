@@ -1,0 +1,340 @@
+*,
+*:before,
+*:after
+{
+    box-sizing: inherit;
+}
+
+@font-face
+{
+    font-family: "Ubuntu", sans-serif;
+    src: url(./fonts/Ubuntu/Ubuntu-Regular.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-Bold.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-BoldItalic.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-Italic.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-Light.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-LightItalic.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-Medium.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-MediumItalic.ttf);
+}
+
+
+html
+{
+    scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+body
+{
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--navbar-color);
+}
+
+
+:root
+{
+    --navbar-color: rgba(255, 128, 0);
+    --font-color-white: rgba(255, 255, 255);
+    --links-background-color: rgba(255, 248, 241);
+    --links-color: rgba(128, 128, 128);
+}
+
+
+header
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 116px;
+    background-color: var(--navbar-color);
+}
+
+
+nav
+{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+
+.nav-headline
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.img-logos-nav
+{
+    width: 64px;
+    width: 64px;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+}
+
+
+
+.burger
+{
+    width: 64px;
+    height: 64px;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    border-style: none;
+    background-color: var(--navbar-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.burger-stack
+{
+    width: 40px;
+    height: 8px;
+    border-radius: 8px 0 8px 0;
+    background-color: var(--font-color-white);
+}
+
+
+.burger-menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+li
+{
+    list-style: none;
+}
+
+
+
+main
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.main-container
+{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--font-color-white);
+    border-width: 0;
+}
+
+
+.all-sections
+{
+    width: 100%;
+}
+
+
+.first-sec
+{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url('/img/food-7098703_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+
+.img-middle
+{
+    margin-bottom: -100px;
+    width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    background-color: var(--font-color-white);
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+
+.second-sec
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.rating-h2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+
+.main-dishes-side-dishes
+{
+    display: flex;
+    align-items: center;
+    margin: 64px 0 16px 16px;
+    background-color: var(--links-background-color);
+}
+
+
+a
+{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--links-color);
+    text-decoration: none;
+    margin-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
+.icon-pfeil
+{
+    width: 96px;
+    height: 54px;
+    margin-left: -20px;
+}
+
+
+
+.dishes
+{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 16px 0 16px;
+    overflow: hidden;
+
+}
+
+
+.card
+{
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+    border-radius: 3px;
+    height: 96px;
+}
+
+.card-body
+{
+
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+
+
+
+footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 116px;
+    background-color: var(--navbar-color);
+    box-shadow: 0cm 0px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+.footer-container
+{
+    max-width: 1440px;
+    width: 100%;
+}
+
+
+
+@media (max-width: 1054px)
+{
+    h2
+    {
+        margin-top: 125px;
+    }
+}
+
+
+@media (max-width: 799px)
+{
+    .second-sec
+    {
+        align-items: center;
+        margin-right: 16px;
+    }
+
+
+    .rating
+    {
+        white-space: nowrap;
+        font-size: 16px;
+    }
+
+
+    .icon-pfeil
+    {
+        width: 60px;
+        height: 30px;
+        margin: 0;
+    }
+
+
+    a
+    {
+        font-size: 16px;
+        margin-right: 16px;
+    }
+
+
+    .main-dishes-side-dishes
+    {
+        justify-content: center;
+        margin: 64px 0 64px 16px;
+    }
+
+
+    .basket
+    {
+        width: 285px;
+    }
+
+}
+
+
+@media(max-width: 599px)
+{
+    .basket
+    {
+        display: none;
+    }
+
+}

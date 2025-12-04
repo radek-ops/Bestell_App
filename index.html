@@ -9,8 +9,9 @@
 
     <link rel="icon" type="png" href="./img/Favicon/favicon-16x16.png" />
     <link rel="shortcut icon" href="./img/Favicon/favicon-32x32.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style/basket.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>BestellApp</title>
 
 </head>
@@ -19,35 +20,104 @@
     <header>
         <nav>
             <div class="nav-headline">
-                <img class="img-logos-nav" src="./img/Favicon/android-chrome-192x192.png" alt="Logo-Bestell-App">
+                <img class="img-logos-nav" src="./img/android-chrome-192x192.png" alt="Logo-Bestell-App">
                 <h1>Bestellando</h1>
             </div>
-            <img class="img-logos-nav" src="./img/Favicon/icons8-menü-100.png" alt="BurgerMenü">
+            <div class="burger-menu">
+                <button class="burger">
+                    <div class="burger-stack"></div>
+                    <div class="burger-stack"></div>
+                    <div class="burger-stack"></div>
+                </button>
+
+
+                <ul class="slider-menu" id="offBurgerMenu">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">Bürger </a></li>
+                    <li><a href="#">Salate</a></li>
+                    <li><a href="#">Chicken Wings</a></li>
+                    <li><a href="#">Beilagen</a></li>
+                </ul>
+            </div>
+        </nav>
         </nav>
     </header>
     <main>
         <div class="main-container">
             <div class="all-sections">
                 <section class="first-sec">
-                    <img class="main-img" src="./img/food-7098703_1920.jpg" alt="Haput-Bild">
-                    <img class="img-middle" src="./img/ai-generated-8663536_640.png" alt="">
+                    <div>
+                        <img class="img-middle" src="./img/ai-generated-8663536_640.png" alt="Bild-Pizza-Bote">
+                    </div>
+                </section>
+
+                <section class="second-sec">
+                    <div class="img-middle-rating-h2">
+                        <div class="rating-h2">
+                            <h2>Paradise Pizza</h2>
+                            <span class="rating">Bewertung (4.2 von 5 Sternen)</span>
+                        </div>
+
+                    </div>
+
+                    <div class="main-dishes-side-dishes">
+                        <img class="icon-pfeil" src="./img/icon/icons8-pfeil-rechts-48.png" alt="icon-pfeil">
+                        <a href="#">Hauptgerichte</a>
+                        <a href="#">Beilagen</a>
+                    </div>
+                </section>
+
+                <section class="dishes">
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+
                 </section>
 
                 <section>
                 </section>
 
-                <section>
-                </section>
-
-                <section>
-                </section>
-
-                <section>
-                </section>
             </div>
-
             <aside>
                 <div class="basket">
+                    <h2 class="basket-h2">Warenkorb</h2>
                 </div>
             </aside>
         </div>
@@ -56,7 +126,6 @@
         <div class="footer-container">
         </div>
     </footer>
-
 </body>
 
 </html>
