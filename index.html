@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./style/basket.css">
     <link rel="stylesheet" href="./style/fonts.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/slider.css">
+    <script defer src="/script.js"></script>
     <title>BestellApp</title>
 
 </head>
@@ -23,32 +25,32 @@
                 <img class="img-logos-nav" src="./img/android-chrome-192x192.png" alt="Logo-Bestell-App">
                 <h1>Bestellando</h1>
             </div>
-            <div class="burger-menu">
-                <button class="burger">
+            <div class="burger-menu" onclick="toggleBurgerMenu()">
+                <button type="button" class="burger" id="onBurgerMenu">
                     <div class="burger-stack"></div>
                     <div class="burger-stack"></div>
                     <div class="burger-stack"></div>
                 </button>
 
-
-                <ul class="slider-menu" id="offBurgerMenu">
-                    <li><a href="#">Pizza</a></li>
-                    <li><a href="#">Bürger </a></li>
-                    <li><a href="#">Salate</a></li>
-                    <li><a href="#">Chicken Wings</a></li>
-                    <li><a href="#">Beilagen</a></li>
-                </ul>
             </div>
-        </nav>
+
+            <ul class="slider-menu toggle_burger_menu " id="offBurgerMenu">
+                <button class="close_button" onclick="toggleBurgerMenu()">x</button>
+                <li><a class="slider-link" href="#">Pizza</a></li>
+                <li><a class="slider-link" href="#">Bürger </a></li>
+                <li><a class="slider-link" href="#">Salate</a></li>
+                <li><a class="slider-link" href="#">Chicken Wings</a></li>
+                <li><a class="slider-link" href="#">Beilagen</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <div class="main-container">
             <div class="all-sections">
                 <section class="first-sec">
-                    <div>
-                        <img class="img-middle" src="./img/ai-generated-8663536_640.png" alt="Bild-Pizza-Bote">
-                    </div>
+                    <button class="img-sound" type="button" onclick="playSound()">
+                        <img class="img-middle" src="./img/ai-generated1-8663536_640.png" alt="Bild-Pizza-Bote">
+                    </button>
                 </section>
 
                 <section class="second-sec">
@@ -62,51 +64,72 @@
 
                     <div class="main-dishes-side-dishes">
                         <img class="icon-pfeil" src="./img/icon/icons8-pfeil-rechts-48.png" alt="icon-pfeil">
-                        <a href="#">Hauptgerichte</a>
-                        <a href="#">Beilagen</a>
+                        <a class="main-link" href="#">Hauptgerichte</a>
+                        <a class="main-link" href="#">Beilagen</a>
                     </div>
                 </section>
 
                 <section class="dishes">
+
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
                     <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
+                    </div>
+                    <div class="card">
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
+                    </div>
+                    <div class="card">
+                        <span class="span-card" id="pizza">
+                            Dishes
+                        </span>
+                        <button id="addDishes" class="plus-button" type="button" onclick="addDishes()">+</button>
                     </div>
 
                 </section>
@@ -118,6 +141,7 @@
             <aside>
                 <div class="basket">
                     <h2 class="basket-h2">Warenkorb</h2>
+                    <div class="dividing-line"></div>
                 </div>
             </aside>
         </div>
