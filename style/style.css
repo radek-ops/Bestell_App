@@ -28,8 +28,9 @@
     --links-color: rgba(128, 128, 128);
     --background-color-slider: rgb(0, 0, 0, 0.9);
     --scrollbar-color: rgba(255, 128, 0) transparent;
-    --scrollbarHTML-color: rgba(255, 128, 0) rgba(255, 255, 255);
+    --scrollbarHTML-color: rgba(255, 128, 0) rgb(216, 221, 250);
     --border-color: rgb(221, 221, 221);
+    --shadow-select-dishes: rgb(231, 230, 230);
 }
 
 
@@ -123,7 +124,6 @@ main
 }
 
 
-
 .first-sec
 {
     max-width: 1440px;
@@ -155,11 +155,11 @@ main
     cursor: pointer;
 }
 
+
 .img-sound
 {
     background-color: transparent;
     border: none;
-
 }
 
 
@@ -183,6 +183,15 @@ main
     flex-direction: column;
 }
 
+.rating
+{
+
+    margin-left: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 21px;
+    color: var(--navbar-color);
+}
+
 
 .rating-h2
 {
@@ -197,7 +206,7 @@ main
 {
     display: flex;
     align-items: center;
-    margin: 64px 0 16px 16px;
+    margin: 64px 0 64px 16px;
     background-color: var(--links-background-color);
 }
 
@@ -227,13 +236,62 @@ main
 {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 0 16px 0 16px;
+    row-gap: 32px;
+    margin-left: 16px;
     overflow: hidden;
     overflow-y: scroll;
-    max-height: 400px;
+    max-height: 500px;
+    margin-bottom: 8px;
     scrollbar-color: var(--scrollbar-color);
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
+}
+
+
+
+
+
+
+
+button
+{
+    border: 0;
+    background-color: var(--font-color-white);
+}
+
+
+.main-card
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    padding-left: auto;
+    padding-right: auto;
+    height: 116px;
+}
+
+
+.main-card:hover
+{
+    background-color: var(--shadow-select-dishes);
+    transform: scale(1.03);
+}
+
+
+.main-card:active
+{
+    transform: translateY(5px);
+}
+
+
+h3
+{
+
+    font-family: "Ubuntu", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 
@@ -242,13 +300,65 @@ main
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--border-color);
-    border-radius: 3px;
-    min-height: 96px;
-    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    box-shadow: 4px 4px 4px rgba(49, 49, 49);
+    margin-right: 6px;
+    cursor: pointer;
 }
+
+
+.card:hover
+{
+
+    background-color: var(--shadow-select-dishes);
+    transform: scale(0.98);
+}
+
+
+
+.menu-card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    min-height: 116px;
+    gap: 5px
+}
+
+.menu-card:hover
+{
+    color: var(--shadow-select-dishes);
+}
+
+
+
+
+.dish-title
+{
+    margin-top: 8px;
+    font-family: "Ubuntu", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.dish-description
+{
+    font-family: "Ubuntu", sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.dish-price
+{
+    margin-top: 24px;
+    font-weight: bold;
+}
+
+
+
 
 
 
@@ -257,23 +367,41 @@ main
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
     border-style: solid;
     border-top: none;
     border-right: none;
+    padding: 0;
     border-width: 1px;
     border-color: var(--border-color);
-    font-size: 32px;
+    font-size: 40px;
     color: var(--navbar-color);
     background-color: var(--font-color-white);
 }
 
 
-.span-card
+
+.plus-button:hover
 {
-    font-family: "Ubuntu", sans-serif;
+    margin-top: 8px;
+    margin-right: 4px;
+    transform: scale(1.2);
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 30px;
+    border-color: black;
 }
+
+.plus-button:active
+{
+    transform: translateY(3px);
+}
+
+
+
+
 
 
 footer
