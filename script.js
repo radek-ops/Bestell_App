@@ -12,6 +12,14 @@ function playSound() {
 }
 
 
+
+
+
+
+
+
+
+
 let allDishes = [
     {
 
@@ -417,6 +425,10 @@ let allDishes = [
 let allDishesArry = [];
 let showDishes = document.getElementById('dishes');
 let dishContentPrice = '';
+let sumtotal = document.getElementById('sum');
+let amounts = document.getElementById('amounts');
+let allamounts = [];
+let allNames = [];
 
 
 function init() {
@@ -439,40 +451,87 @@ function dishArry() {
 function loadDishes(i) {
 
     return `<button type="button" onclick="loadCurrentSelection(${i})">
-            <div class="main-card" id="card">
-            <h3>${allDishesArry[i].title}</h3>
-             </div></button>`;
+                <div class="main-card" id="card">
+                 <h3>${allDishesArry[i].title}</h3>
+               </div>
+            </button>`;
 }
-
 
 function loadCurrentSelection(i) {
     showDishes.innerHTML = '';
 
     for (let j = 0; j < allDishes[i].selection.length; j++) {
         const entireSelection = allDishes[i].selection[j];
-        let currentDishes = getcurrentDishes(entireSelection);
+
+        let currentDishes = getcurrentDishes(entireSelection, j);
         showDishes.innerHTML += currentDishes;
     }
 
 
-    function getcurrentDishes(entireSelection) {
+    function getcurrentDishes(entireSelection, j) {
         return `<div class="card" id="card">
                        <div class="menu-card">
                           <span class="dish-title" >${entireSelection.name}</span>
                           <span class="dish-description" >${entireSelection.description}</span>
-                          <span class="dish-price" id="dishPrice" >Preis: ${entireSelection.price.toFixed(2).replace(".", ",")} €</span >
+                          <span class="dish-price" id="dishPrice">Preis: ${entireSelection.price.toFixed(2).replace(".", ",")} €</span >
                         </div> 
-                       <button id="plusDish" class="plus-button" type="button" onclick="addtoBasket()">+</button>                                       
+                       <button id="plusDish" class="plus-button" type="button" onclick="addtoBasket(${parseFloat(entireSelection.price)}, '${entireSelection.name}', ${j})">+</button>                                       
                 </div >`;
     }
 
 }
 
 
+function addtoBasket(toPay, dishName, j) {
+    allNames.push(dishName);
+    allamounts.push(toPay);
+
+    amounts.innerHTML += showAmounts(toPay, dishName, j);
 
 
-function addtoBasket() {
+    calculate(allamounts);
 
+}
+
+
+function showAmounts(toPay, dishName, j) {
+    return `<div class="besket"><p class="dish-title">${dishName}</p>
+                <div class="amount-plus-minus">
+                 <button  class="button-minus-basket" type="button" >-</button>
+              menge<button onclick="addtoBasket(${toPay})" class="button-plus-basket" type="button">+</button>
+                   <span class="basket-price">${toPay.toFixed(2).replace(".", ",") + '€'}</span>
+                  <div class="trash"><button onclick="deleteCompletely(${j})" class="trash-button" typ="button" >&#128465;</button>
+                </div>
+               </div>
+            </div>`; s
+}
+
+
+function calculate(allamounts) {
+    let sum = 0;
+    for (let i = 0; i < allamounts.length; i++) {
+        sum += allamounts[i];
+    }
+    sumtotal.innerHTML = showTotalCalculate(sum);
+}
+
+
+function showTotalCalculate(sum) {
+    return `<div>
+             <div class="total-amount">
+              <b>Gesamt:</b><span  class="total-price" > ${sum.toFixed(2).replace(".", ",") + '€'}</span>
+             </div>
+          </div>`;
+}
+
+
+function deleteCompletely(j) {
+    console.log(j);
+
+
+    allamounts.splice(j, 1);
+
+    addtoBasket();
 
 
 }
