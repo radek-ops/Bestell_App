@@ -19,7 +19,7 @@
 </head>
 
 <body onload="init()">
-    <header>
+    <header id="start">
         <nav>
             <div class="nav-headline">
                 <img class="img-logos-nav" src="./img/android-chrome-192x192.png" alt="Logo-Bestell-App">
@@ -27,23 +27,21 @@
             </div>
             <div class="burger-menu" onclick="toggleBurgerMenu()">
                 <button type="button" class="burger" id="onBurgerMenu">
-                    <div class="burger-stack"></div>
-                    <div class="burger-stack"></div>
-                    <div class="burger-stack"></div>
+                    <div class="burger-stack">Quick</div>
+                    <div class="burger-stack">Menü</div>
                 </button>
 
             </div>
 
             <ul class="slider-menu toggle_burger_menu " id="offBurgerMenu">
                 <button class="close_button" onclick="toggleBurgerMenu()">x</button>
-                <li><a class="slider-link" href="#">Pizza`s</a></li>
-                <li><a class="slider-link" href="#">Bürger </a></li>
-                <li><a class="slider-link" href="#">Döner</a></li>
-                <li><a class="slider-link" href="#">Chicken Gerichte</a></li>
-                <li><a class="slider-link" href="#">Extras</a></li>
-                <li><a class="slider-link" href="#">Beilagen</a></li>
-                <li><a class="slider-link" href="#">Soßen</a></li>
-            </ul>
+                <li><button class="slider-link" onclick="loadCurrentSelection(0)">Pizza´s</button></li>
+                <li><button class="slider-link" onclick="loadCurrentSelection(1)">Bürger</button></li>
+                <li><button class="slider-link" onclick="loadCurrentSelection(2)">Döner</button></li>
+                <li><button class="slider-link" onclick="loadCurrentSelection(3)">Chicken Gerichte</button></li>
+                <li><button class="slider-link" onclick="loadCurrentSelection(4)">Extras</button></li>
+                <li><button class="slider-link" onclick="loadCurrentSelection(5)">Beilagen</button></li>
+                <li><button class="slider-link" onclick="loadCurrentSelection(6)">Soßen</button>
         </nav>
     </header>
     <main>
@@ -56,22 +54,23 @@
                 </section>
 
                 <section class="second-sec">
+                    <h2>Paradise Pizza</h2>
                     <div class="img-middle-rating-h2">
-                        <div class="rating-h2">
-                            <h2>Paradise Pizza</h2>
-                            <span class="rating">Bewertung (4.2 von 5 Sternen)</span>
-                        </div>
-
+                        <span class="rating">Bewertung (4.2 von 5 Sternen)</span>
+                        <span>Lieferkosten: 5€</span>
                     </div>
 
                     <div class="main-dishes-side-dishes">
-                        <img class="icon-pfeil" src="./img/icon/icons8-pfeil-rechts-48.png" alt="icon-pfeil">
-                        <a class="main-link" href="#">Hauptgerichte</a>
-                        <a class="main-link" href="#">Beilagen</a>
+                        <a href="#start"><img class="icon-pfeil" src="./img/icon/icons8-außeneinrichtung-48.png"
+                                alt="icon-house"></a>
+                        <button class="main-link" onclick="mainDishes()">
+                            Hauptgerichte</button>
+                        <button class="main-link" onclick="sideDishes()">Beilagen</button>
+
                     </div>
                 </section>
 
-                <section>
+                <section id="mainDishes">
                     <div class="scroll-content dishes" id="dishes">
 
                     </div>

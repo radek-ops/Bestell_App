@@ -20,10 +20,13 @@
 
 .burger-stack
 {
-    width: 40px;
+
     height: 8px;
     border-radius: 8px 0 8px 0;
-    background-color: var(--font-color-white);
+    color: var(--font-color-white);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .burger-menu:active
@@ -37,9 +40,12 @@
 
 .slider-link
 {
-
+    border: none;
+    background-color: transparent;
     text-decoration: none;
     color: var(--font-color-white);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
 }
 
 .slider-link:hover
@@ -66,14 +72,13 @@
 {
     display: flex;
     justify-content: center;
-    align-items: center;
     color: var(--font-color-white);
     background-color: var(--background-color-closeButton);
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 50%;
     border-width: 4px;
     border-color: var(--font-color-white);
-    width: 42px;
+    width: 30px;
     padding-block: 0px;
     padding-inline: 0px;
     margin-top: 15px;
@@ -85,20 +90,21 @@
 {
     display: flex;
     position: fixed;
-    width: 300px;
-    height: 600px;
+    width: 175px;
+    height: 350px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
     padding-left: 20px;
     font-size: 21px;
-    gap: 16px;
+    gap: 8px;
     border-radius: 10px;
     background-color: var(--background-color-slider);
-    top: 0px;
+    top: 320px;
+    bottom: ;
     right: 0;
     margin-right: 0px;
-    padding-bottom: 80px;
+    padding-bottom: 16px;
     transform: translateX(150%);
     list-style: none;
     z-index: 3;

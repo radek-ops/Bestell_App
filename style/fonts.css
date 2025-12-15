@@ -24,3 +24,10 @@ span
     font-size: 21px;
     color: var(--navbar-color);
 }
+
+
+li
+{
+    font-family: "Ubuntu", sans-serif;
+
+}

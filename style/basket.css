@@ -25,10 +25,11 @@ aside
 
 .basket
 {
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     padding-right: 16px;
-    padding-left: 16px;
+    padding-left: 32px;
     width: 300px;
     height: 80vh;
     position: sticky;
@@ -36,6 +37,10 @@ aside
     border-style: solid;
     border-width: 0;
     box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent;
 }
 
 
@@ -55,6 +60,7 @@ aside
 {
     font-size: 16px;
     color: var(--font-color-black);
+    white-space: nowrap;
 }
 
 
@@ -175,25 +181,39 @@ p.dish-title
     padding-top: 24px;
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
-
-
 }
 
 
-.total-amount
+.price-total
 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.subtotal
+{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-
 }
 
-
-.total-price
+.total
 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-total
+{
+    font-family: "Ubuntu", sans-serif;
     font-size: 16px;
     color: var(--font-color-black);
     margin: 0;
+}
+
+.span-basket
+{
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--font-color-black);
 }

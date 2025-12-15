@@ -1,28 +1,5 @@
-function toggleBurgerMenu() {
-
-    document.getElementById("onBurgerMenu").classList.toggle('toggle_burger_menu');
-    document.getElementById("offBurgerMenu").classList.toggle('toggle_burger_menu');
-}
-
-
-let ifeelfgood = new Audio('/sounds/james-brown-i-feel-good.mp3')
-function playSound() {
-    ifeelfgood.play();
-
-}
-
-
-
-
-
-
-
-
-
-
 let allDishes = [
     {
-
         "dish": true,
         "title": "Pizza`s",
         "selection": [
@@ -307,7 +284,7 @@ let allDishes = [
         ]
     },
     {
-
+        "id": "beilagen",
         "dish": true,
         "title": "Beilagen",
         "selection": [
@@ -423,12 +400,13 @@ let allDishes = [
 ]
 
 let allDishesArry = [];
+let allNames = [];
+let allamounts = [];
+let allSingelPrices = [];
 let showDishes = document.getElementById('dishes');
-let dishContentPrice = '';
 let sumtotal = document.getElementById('sum');
 let amounts = document.getElementById('amounts');
-let allamounts = [];
-let allNames = [];
+let currentDishes = '';
 
 
 function init() {
@@ -441,7 +419,6 @@ function dishArry() {
     allDishesArry = allDishes.filter((createArry) => { return createArry['dish'] });
 
     for (let i = 0; i < allDishesArry.length; i++) {
-        let singelDish = allDishesArry[i];
         let selection = loadDishes(i);
         showDishes.innerHTML += selection;
     }
@@ -449,61 +426,110 @@ function dishArry() {
 
 
 function loadDishes(i) {
-
-    return `<button type="button" onclick="loadCurrentSelection(${i})">
-                <div class="main-card" id="card">
+    return `<button class="button-main-menus" type="button" onclick="loadCurrentSelection(${i})">
+                <div class="main-card" id="card${i}">
                  <h3>${allDishesArry[i].title}</h3>
                </div>
             </button>`;
 }
 
+
 function loadCurrentSelection(i) {
     showDishes.innerHTML = '';
-
     for (let j = 0; j < allDishes[i].selection.length; j++) {
         const entireSelection = allDishes[i].selection[j];
-
-        let currentDishes = getcurrentDishes(entireSelection, j);
+        currentDishes = getCurrentDishes(entireSelection, j);
         showDishes.innerHTML += currentDishes;
     }
 
 
-    function getcurrentDishes(entireSelection, j) {
-        return `<div class="card" id="card">
+    function getCurrentDishes(entireSelection, j) {
+        return `<div class="card" id="menucard${j}">
                        <div class="menu-card">
                           <span class="dish-title" >${entireSelection.name}</span>
                           <span class="dish-description" >${entireSelection.description}</span>
                           <span class="dish-price" id="dishPrice">Preis: ${entireSelection.price.toFixed(2).replace(".", ",")} €</span >
                         </div> 
-                       <button id="plusDish" class="plus-button" type="button" onclick="addtoBasket(${parseFloat(entireSelection.price)}, '${entireSelection.name}', ${j})">+</button>                                       
+                       <button id="plusDish" class="plus-button" type="button" onclick="addToBasket('${entireSelection.name}', ${parseFloat(entireSelection.price)}, ${j})">+</button>                                       
                 </div >`;
     }
-
 }
 
 
-function addtoBasket(toPay, dishName, j) {
-    allNames.push(dishName);
-    allamounts.push(toPay);
-
-    amounts.innerHTML += showAmounts(toPay, dishName, j);
-
-
+function addToBasket(dishName, toPay, j) {
+    let index = allNames.indexOf(dishName);
+    if (index === -1) {
+        allNames.push(dishName);
+        allamounts.push(toPay);
+        allSingelPrices.push(toPay);
+        amounts.innerHTML += showAmounts(dishName, toPay, index);
+    } else {
+        allamounts[index] += toPay;
+    }
+    updateBasket();
     calculate(allamounts);
-
 }
 
 
-function showAmounts(toPay, dishName, j) {
+function updateBasket() {
+    amounts.innerHTML = '';
+    for (let i = 0; i < allNames.length; i++) {
+        amounts.innerHTML += showAmounts(allNames[i], allamounts[i], i);
+
+    }
+}
+
+
+function minusDishesInBasket(i) {
+    let singelPrice = allSingelPrices[i];
+    if (allamounts[i] > singelPrice) {
+        allamounts[i] -= singelPrice;
+        updateBasket();
+        calculate(allamounts);
+    } else {
+        allNames.splice(i, 1);
+        allamounts.splice(i, 1);
+        allSingelPrices.splice(i, 1);
+        updateBasket();
+        calculate(allamounts);
+    }
+}
+
+
+function plusDishesInBasket(i) {
+    let singelPrice = allSingelPrices[i];
+    if (allamounts[i] >= singelPrice) {
+        allamounts[i] += singelPrice;
+        allamounts[i] > singelPrice;
+        updateBasket();
+        calculate(allamounts);
+    } else {
+        return;
+    }
+}
+
+
+function deleteCompletely(i) {
+    allNames.splice(i, 1);
+    allamounts.splice(i, 1);
+    updateBasket();
+    calculate(allamounts);
+}
+
+
+function showAmounts(dishName, toPay, i) {
+    let singelPrice = allSingelPrices[i];
+    let counterCal = Math.ceil(allamounts[i] / singelPrice);
+
     return `<div class="besket"><p class="dish-title">${dishName}</p>
                 <div class="amount-plus-minus">
-                 <button  class="button-minus-basket" type="button" >-</button>
-              menge<button onclick="addtoBasket(${toPay})" class="button-plus-basket" type="button">+</button>
-                   <span class="basket-price">${toPay.toFixed(2).replace(".", ",") + '€'}</span>
-                  <div class="trash"><button onclick="deleteCompletely(${j})" class="trash-button" typ="button" >&#128465;</button>
+                 <button onclick="minusDishesInBasket(${i})" class="button-minus-basket" type="button" >-</button>
+             <span id="counter${i}" class="basket-price">${counterCal}</span><button onclick="plusDishesInBasket(${i})" class="button-plus-basket" type="button">+</button>
+                   <span id="basketPricePlus" class="basket-price">${toPay.toFixed(2).replace(".", ",") + ' €'}</span>
+                  <div class="trash"><button onclick="deleteCompletely(${i})" class="trash-button" typ="button" >&#128465;</button>
                 </div>
                </div>
-            </div>`; s
+            </div>`;
 }
 
 
@@ -517,30 +543,66 @@ function calculate(allamounts) {
 
 
 function showTotalCalculate(sum) {
-    return `<div>
-             <div class="total-amount">
-              <b>Gesamt:</b><span  class="total-price" > ${sum.toFixed(2).replace(".", ",") + '€'}</span>
-             </div>
-          </div>`;
+    return ` <div class="price-total">
+                 <div class ="subtotal">
+                     <p class="b-total">Zwischensumme:</p><span class="span-basket">${sum.toFixed(2).replace(".", ",") + ' €'}</span>
+                        </div>
+                         <div></div>
+                         <div class="total">
+                       <b>Gesamt:</b><b>${sum.toFixed(2).replace(".", ",") + ' €'}</b>
+                   </div>
+              </div>`;
 }
 
 
-function deleteCompletely(j) {
-    console.log(j);
+function toggleBurgerMenu() {
+    let onBurgerButton = document.getElementById("onBurgerMenu")
+    let offBurgerButton = document.getElementById("offBurgerMenu")
+    onBurgerButton.classList.toggle('toggle_burger_menu');
+    offBurgerButton.classList.toggle('toggle_burger_menu');
 
-
-    allamounts.splice(j, 1);
-
-    addtoBasket();
-
-
+    setTimeout(function () {
+        document.querySelector('footer').scrollIntoView({
+            behavior: 'smooth', block: 'end'
+        });
+    }, 300);
 }
 
 
+let ifeelfgood = new Audio('/sounds/james-brown-i-feel-good.mp3')
+function playSound() {
+    ifeelfgood.play();
+}
+
+function mainDishes() {
+    dishArry();
+    setTimeout(function () {
+        document.querySelector('#card0').scrollIntoView({
+            behavior: 'smooth', block: 'start'
+        });
+    }, 300);
+
+    setTimeout(function () {
+        document.querySelector('footer').scrollIntoView({
+            behavior: 'smooth', block: 'end'
+        });
+    }, 300);
+}
 
 
+function sideDishes() {
+    dishArry();
+    setTimeout(function () {
+        document.querySelector('footer').scrollIntoView({
+            behavior: 'smooth', block: 'end'
+        });
+    }, 100);
+    setTimeout(function () {
+        document.querySelector('#card5').scrollIntoView({
+            behavior: 'smooth', block: 'start'
+        });
+    }, 300);
 
 
-
-
+}
 
