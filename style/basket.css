@@ -5,44 +5,40 @@
     --links-background-color: rgba(255, 248, 241);
     --links-color: rgba(128, 128, 128);
     --background-color-slider: rgb(0, 0, 0, 0.9);
-    --scrollbar-color: rgba(255, 128, 0) transparent;
-    --scrollbarHTML-color: rgba(255, 128, 0) rgba(255, 255, 255);
+    --scrollbarHTML-color: rgba(255, 255, 255) transparent;
     --border-color: rgb(221, 221, 221);
     --font-color-black: rgba(0, 0, 0, );
 }
-
 
 aside
 {
     display: flex;
     justify-content: center;
-    min-height: 280px;
     position: relative;
     box-sizing: border-box;
+    flex-shrink: 0;
+    margin: 0;
     width: 350px;
 }
 
-
 .basket
 {
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     padding-right: 16px;
     padding-left: 32px;
-    width: 300px;
-    height: 80vh;
+    min-width: 350px;
+    max-height: 85vh;
     position: sticky;
     top: 0;
     border-style: solid;
     border-width: 0;
     box-sizing: border-box;
     overflow: hidden;
-    overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: transparent;
+    scrollbar-color: var(--scrollbar-color);
+    flex-shrink: 0;
 }
-
 
 .basket-h2
 {
@@ -55,14 +51,12 @@ aside
     box-shadow: 4px 4px 4px rgb(49, 49, 49);
 }
 
-
 .basket-price
 {
     font-size: 16px;
     color: var(--font-color-black);
     white-space: nowrap;
 }
-
 
 .amounts
 {
@@ -71,19 +65,18 @@ aside
     margin-top: 32px;
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
+    flex: 1;
+    overflow-y: auto;
 }
-
 
 .button-minus-basket
 {
-
     font-family: "Ubuntu", sans-serif;
     font-size: 36px;
     color: var(--navbar-color);
     border: none;
     background-color: var(--font-color-white);
 }
-
 
 .button-minus-basket:hover
 {
@@ -95,10 +88,8 @@ aside
     transform: translateY(3px);
 }
 
-
 .button-plus-basket
 {
-
     font-family: "Ubuntu", sans-serif;
     font-size: 24px;
     color: var(--navbar-color);
@@ -116,35 +107,30 @@ aside
     transform: translateY(3px);
 }
 
-
-
 .amount-plus-minus
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 8px;
     align-items: center;
-    gap: 15px;
     margin-top: 8px;
     margin-bottom: 16px;
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
+    padding-left: 16px;
 }
-
-
-
 
 p.dish-title
 {
     margin: 0;
     font-size: 16px;
+    padding-left: 16px;
 }
-
 
 .trash
 {
     padding-left: 16px;
 }
-
 
 .trash-button
 {
@@ -164,7 +150,6 @@ p.dish-title
     transform: translateY(3px);
 }
 
-
 .dividing-line
 {
     margin-top: 50px;
@@ -175,7 +160,6 @@ p.dish-title
     margin-left: 6px;
 }
 
-
 .sum
 {
     padding-top: 24px;
@@ -183,27 +167,26 @@ p.dish-title
     font-size: 16px;
 }
 
-
 .price-total
 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8spx;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 16px;
 }
 
-.subtotal
-{
-    display: flex;
-    justify-content: space-between;
-}
-
+.subtotal,
+.tax,
 .total
 {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 6px;
 }
 
-.b-total
+.p-total
 {
     font-family: "Ubuntu", sans-serif;
     font-size: 16px;
@@ -216,4 +199,23 @@ p.dish-title
     font-size: 16px;
     font-family: "Ubuntu", sans-serif;
     color: var(--font-color-black);
+}
+
+.submit-button
+{
+    margin-top: 16px;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    border-style: none;
+    background-color: green;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--font-color-white);
+    cursor: pointer;
+    height: 32px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.submit-button:active
+{
+    transform: scale(0.97);
 }

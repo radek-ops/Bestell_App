@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="./style/fonts.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/slider.css">
-    <script defer src="/script.js"></script>
+    <script defer src="scripts/db.js"></script>
+    <script defer src="scripts/template.js"></script>
+    <script defer src="scripts/script.js"></script>
     <title>BestellApp</title>
-
 </head>
 
 <body onload="init()">
@@ -33,20 +34,13 @@
 
             </div>
 
-            <ul class="slider-menu toggle_burger_menu " id="offBurgerMenu">
-                <button class="close_button" onclick="toggleBurgerMenu()">x</button>
-                <li><button class="slider-link" onclick="loadCurrentSelection(0)">Pizza´s</button></li>
-                <li><button class="slider-link" onclick="loadCurrentSelection(1)">Bürger</button></li>
-                <li><button class="slider-link" onclick="loadCurrentSelection(2)">Döner</button></li>
-                <li><button class="slider-link" onclick="loadCurrentSelection(3)">Chicken Gerichte</button></li>
-                <li><button class="slider-link" onclick="loadCurrentSelection(4)">Extras</button></li>
-                <li><button class="slider-link" onclick="loadCurrentSelection(5)">Beilagen</button></li>
-                <li><button class="slider-link" onclick="loadCurrentSelection(6)">Soßen</button>
+
         </nav>
     </header>
     <main>
         <div class="main-container">
             <div class="all-sections">
+
                 <section class="first-sec">
                     <button class="img-sound" type="button" onclick="playSound()">
                         <img class="img-middle" src="./img/ai-generated1-8663536_640.png" alt="Bild-Pizza-Bote">
@@ -57,39 +51,42 @@
                     <h2>Paradise Pizza</h2>
                     <div class="img-middle-rating-h2">
                         <span class="rating">Bewertung (4.2 von 5 Sternen)</span>
-                        <span>Lieferkosten: 5€</span>
+                        <span class="deliver-price">Lieferkosten: 3,50 €</span>
                     </div>
-
                     <div class="main-dishes-side-dishes">
                         <a href="#start"><img class="icon-pfeil" src="./img/icon/icons8-außeneinrichtung-48.png"
                                 alt="icon-house"></a>
-                        <button class="main-link" onclick="mainDishes()">
+                        <button class="main-link" onclick="scrollMainDishes()">
                             Hauptgerichte</button>
-                        <button class="main-link" onclick="sideDishes()">Beilagen</button>
-
+                        <button class="main-link" onclick="scrollSideDishes()">Beilagen</button>
                     </div>
                 </section>
 
                 <section id="mainDishes">
                     <div class="scroll-content dishes" id="dishes">
-
                     </div>
                 </section>
-
-                <section>
-                </section>
-
             </div>
+
             <aside>
                 <div class="basket">
                     <h2 class="basket-h2">Warenkorb</h2>
+                    <ul class="slider-menu toggle_burger_menu " id="offBurgerMenu">
+                        <button class="close_button" onclick="toggleBurgerMenu()">x</button>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(0)">Pizza´s</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(1)">Bürger</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(2)">Döner</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(3)">Chicken</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(4)">Salate</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(5)">Extras</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(6)">Beilagen</button></li>
+                        <li><button class="slider-link" onclick="loadCurrentSelection(7)">Soßen</button></li>
+                    </ul>
                     <div class="amounts" id="amounts"></div>
-
                     <div class="dividing-line"></div>
                     <div class="sum" id="sum"></div>
                 </div>
             </aside>
-        </div>
     </main>
     <footer>
         <div class="footer-container">

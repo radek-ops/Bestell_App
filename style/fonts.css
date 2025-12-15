@@ -7,7 +7,6 @@ h1
     text-shadow: 4px 4px 3px rgb(49, 49, 49);
 }
 
-
 h2
 {
     margin: 32px 0 32px 16px;
@@ -16,18 +15,31 @@ h2
     white-space: nowrap;
 }
 
+h3
+{
+    font-family: "Ubuntu", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
 
 span
 {
-    margin-left: 16px;
+    margin-left: px;
     font-family: "Ubuntu", sans-serif;
     font-size: 21px;
     color: var(--navbar-color);
 }
 
+ul
+{
+
+    padding: 8px;
+}
 
 li
 {
     font-family: "Ubuntu", sans-serif;
+    white-space: nowrap;
 
 }

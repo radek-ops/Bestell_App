@@ -20,7 +20,6 @@
 
 .burger-stack
 {
-
     height: 8px;
     border-radius: 8px 0 8px 0;
     color: var(--font-color-white);
@@ -37,7 +36,6 @@
     transform: translateY(3px);
 }
 
-
 .slider-link
 {
     border: none;
@@ -53,20 +51,18 @@
     color: var(--navbar-color);
 }
 
-
 .toggle_burger_menu
 {
     display: none;
 }
-
 
 .slider-menu:not(.toggle_burger_menu)
 {
     transform: translateX(0);
     opacity: 1;
     transition: transform 350ms ease-in-out;
+    display: flex;
 }
-
 
 .close_button
 {
@@ -85,27 +81,24 @@
     cursor: pointer;
 }
 
-
 .slider-menu
 {
     display: flex;
-    position: fixed;
-    width: 175px;
-    height: 350px;
+    position: absolute;
+    width: 100px;
+    height: 400px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    padding-left: 20px;
+    padding-right: 8px;
     font-size: 21px;
     gap: 8px;
     border-radius: 10px;
     background-color: var(--background-color-slider);
-    top: 320px;
-    bottom: ;
-    right: 0;
-    margin-right: 0px;
+    top: 160px;
+    right: 20px;
     padding-bottom: 16px;
-    transform: translateX(150%);
+    transform: translateX(800%);
     list-style: none;
     z-index: 3;
 }

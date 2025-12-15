@@ -5,7 +5,6 @@
     box-sizing: inherit;
 }
 
-
 @font-face
 {
     font-family: "Ubuntu", sans-serif;
@@ -19,20 +18,18 @@
     src: url(./fonts/Ubuntu/Ubuntu-MediumItalic.ttf);
 }
 
-
 :root
 {
     --navbar-color: rgba(255, 128, 0);
     --font-color-white: rgba(255, 255, 255);
     --links-background-color: rgba(255, 248, 241);
     --links-color: rgba(128, 128, 128);
-    --background-color-slider: rgb(0, 0, 0, 0.5);
-    --scrollbar-color: rgba(255, 128, 0) transparent;
-    --scrollbarHTML-color: rgba(255, 128, 0) rgb(216, 221, 250);
+    --background-color-slider: rgb(0, 0, 0, 0.7);
+    --scrollbar-color: rgb(239, 239, 239) transparent;
+    --scrollbarHTML-color: rgba(255, 255, 255) transparent;
     --border-color: rgb(221, 221, 221);
     --shadow-select-dishes: rgb(231, 230, 230);
 }
-
 
 html
 {
@@ -40,11 +37,10 @@ html
     margin: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
-    scrollbar-color: white transparent;
+    scrollbar-color: var(--scrollbarHTML-color);
     scrollbar-width: thin;
     flex: 1;
 }
-
 
 body
 {
@@ -54,7 +50,6 @@ body
     scrollbar-color: white transparent;
     flex: 1;
 }
-
 
 header
 {
@@ -66,7 +61,6 @@ header
     box-shadow: 0cm 0px 20px 1px rgba(0, 0, 0, 0.3);
 }
 
-
 nav
 {
     max-width: 1440px;
@@ -77,14 +71,12 @@ nav
     padding: 16px;
 }
 
-
 .nav-headline
 {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 
 .img-logos-nav
 {
@@ -93,7 +85,6 @@ nav
     box-shadow: 4px 4px 4px rgb(49, 49, 49);
 }
 
-
 main
 {
     width: 100%;
@@ -101,7 +92,6 @@ main
     justify-content: center;
     flex: 1;
 }
-
 
 .main-container
 {
@@ -113,7 +103,6 @@ main
     border-width: 0;
 }
 
-
 .all-sections
 {
     width: 100%;
@@ -124,7 +113,6 @@ main
     border-bottom: none;
     border-left: none;
 }
-
 
 .first-sec
 {
@@ -142,7 +130,6 @@ main
     box-shadow: 4px 4px 4px rgb(49, 49, 49);
 }
 
-
 .img-middle
 {
     margin-bottom: -100px;
@@ -157,13 +144,11 @@ main
     cursor: pointer;
 }
 
-
 .img-sound
 {
     background-color: transparent;
     border: none;
 }
-
 
 @keyframes drehung
 {
@@ -178,14 +163,20 @@ main
     }
 }
 
-
 .second-sec
 {
     display: flex;
     flex-direction: column;
 }
 
+.deliver-price
+{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 1px 2px rgb(49, 49, 49);
 
+}
 
 .img-middle-rating-h2
 {
@@ -195,8 +186,8 @@ main
     font-family: "Ubuntu", sans-serif;
     font-size: 21px;
     color: var(--navbar-color);
+    margin-left: 16px;
 }
-
 
 .main-dishes-side-dishes
 {
@@ -206,7 +197,6 @@ main
     background-color: var(--links-background-color);
     gap: 32px;
 }
-
 
 .main-link
 {
@@ -224,12 +214,10 @@ main
     background-color: transparent;
 }
 
-
 .main-link:hover
 {
     color: var(--navbar-color);
 }
-
 
 .icon-house
 {
@@ -237,7 +225,6 @@ main
     height: 48px;
     margin-left: -20px;
 }
-
 
 .dishes
 {
@@ -253,7 +240,6 @@ main
     scrollbar-color: white transparent;
 }
 
-
 .main-card
 {
     display: flex;
@@ -268,29 +254,16 @@ main
     background-color: var(--font-color-white);
 }
 
-
 .main-card:hover
 {
     background-color: var(--shadow-select-dishes);
     transform: scale(1.03);
 }
 
-
 .main-card:active
 {
     transform: translateY(5px);
 }
-
-
-h3
-{
-
-    font-family: "Ubuntu", sans-serif;
-    color: black;
-    font-weight: bold;
-    font-size: 24px;
-}
-
 
 .card
 {
@@ -302,14 +275,11 @@ h3
     cursor: pointer;
 }
 
-
 .card:hover
 {
-
     background-color: var(--shadow-select-dishes);
     transform: scale(0.99);
 }
-
 
 .menu-card
 {
@@ -321,12 +291,10 @@ h3
     gap: 5px
 }
 
-
 .menu-card:hover
 {
     color: var(--shadow-select-dishes);
 }
-
 
 .dish-title
 {
@@ -337,7 +305,6 @@ h3
     font-size: 20px;
 }
 
-
 .dish-description
 {
     font-family: "Ubuntu", sans-serif;
@@ -346,20 +313,17 @@ h3
     font-size: 16px;
 }
 
-
 .dish-price
 {
     margin-top: 24px;
     font-weight: bold;
 }
 
-
 .button-main-menus
 {
     border: none;
     background-color: var(--font-color-white);
 }
-
 
 .plus-button
 {
@@ -380,7 +344,6 @@ h3
     background-color: var(--font-color-white);
 }
 
-
 .plus-button:hover
 {
     margin-top: 8px;
@@ -392,12 +355,10 @@ h3
     border-color: black;
 }
 
-
 .plus-button:active
 {
     transform: translateY(3px);
 }
-
 
 footer
 {
@@ -411,13 +372,11 @@ footer
     z-index: 2;
 }
 
-
 .footer-container
 {
     max-width: 1440px;
     width: 100%;
 }
-
 
 @media (max-width: 1054px)
 {
@@ -427,7 +386,6 @@ footer
     }
 }
 
-
 @media (max-width: 799px)
 {
     .second-sec
@@ -436,13 +394,11 @@ footer
         margin-right: 16px;
     }
 
-
     .rating
     {
         white-space: nowrap;
         font-size: 16px;
     }
-
 
     .icon-pfeil
     {
@@ -451,13 +407,11 @@ footer
         margin: 0;
     }
 
-
     a
     {
         font-size: 16px;
         margin-right: 16px;
     }
-
 
     .main-dishes-side-dishes
     {
@@ -465,14 +419,11 @@ footer
         margin: 64px 0 64px 16px;
     }
 
-
     .basket
     {
         width: 285px;
     }
-
 }
-
 
 @media(max-width: 599px)
 {
@@ -480,5 +431,4 @@ footer
     {
         display: none;
     }
-
 }
