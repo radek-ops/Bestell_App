@@ -1,15 +1,20 @@
+html
+{
+    font-size: 62.5%;
+}
+
 .burger
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 64px;
+    width: 6.4rem;
+    height: 6.4rem;
     box-shadow: 4px 4px 4px rgb(49, 49, 49);
     border-style: none;
     background-color: var(--navbar-color);
-    gap: 8px;
+    gap: 0.8rem;
     cursor: pointer;
 }
 
@@ -20,11 +25,11 @@
 
 .burger-stack
 {
-    height: 8px;
-    border-radius: 8px 0 8px 0;
+    height: 0.8rem;
+    border-radius: 0.8rem 0 0.8rem 0;
     color: var(--font-color-white);
     font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -33,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(3px);
+    transform: translateY(0.3rem);
 }
 
 .slider-link
@@ -43,7 +48,7 @@
     text-decoration: none;
     color: var(--font-color-white);
     font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .slider-link:hover
@@ -70,14 +75,13 @@
     justify-content: center;
     color: var(--font-color-white);
     background-color: var(--background-color-closeButton);
-    font-size: 20px;
+    font-size: 2.0rem;
     border-radius: 50%;
-    border-width: 4px;
+    border-width: 0.4rem;
     border-color: var(--font-color-white);
-    width: 30px;
-    padding-block: 0px;
-    padding-inline: 0px;
-    margin-top: 15px;
+    width: 3.0rem;
+    padding-block: 0rem;
+    padding-inline: 0rem;
     cursor: pointer;
 }
 
@@ -85,19 +89,19 @@
 {
     display: flex;
     position: absolute;
-    width: 100px;
-    height: 400px;
+    width: 10.0rem;
+    height: 40.0rem;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    padding-right: 8px;
-    font-size: 21px;
-    gap: 8px;
-    border-radius: 10px;
+    padding-right: 0.8rem;
+    font-size: 2.1rem;
+    gap: 0.8rem;
+    border-radius: 1.0rem;
     background-color: var(--background-color-slider);
-    top: 160px;
-    right: 20px;
-    padding-bottom: 16px;
+    top: 15.0rem;
+    right: 2.0rem;
+    padding-bottom: 0.8rem;
     transform: translateX(800%);
     list-style: none;
     z-index: 3;

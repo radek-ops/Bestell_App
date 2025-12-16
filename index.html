@@ -16,6 +16,7 @@
     <script defer src="scripts/db.js"></script>
     <script defer src="scripts/template.js"></script>
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/sendOrder.js"></script>
     <title>BestellApp</title>
 </head>
 
@@ -31,10 +32,7 @@
                     <div class="burger-stack">Quick</div>
                     <div class="burger-stack">Menü</div>
                 </button>
-
             </div>
-
-
         </nav>
     </header>
     <main>
@@ -52,7 +50,10 @@
                     <div class="img-middle-rating-h2">
                         <span class="rating">Bewertung (4.2 von 5 Sternen)</span>
                         <span class="deliver-price">Lieferkosten: 3,50 €</span>
+                        <button class="basket-responsive-button" id="besketResponsiveOn"
+                            onclick="openBasket()">Warenkorb</button>
                     </div>
+
                     <div class="main-dishes-side-dishes">
                         <a href="#start"><img class="icon-pfeil" src="./img/icon/icons8-außeneinrichtung-48.png"
                                 alt="icon-house"></a>
@@ -67,11 +68,10 @@
                     </div>
                 </section>
             </div>
-
             <aside>
-                <div class="basket">
-                    <h2 class="basket-h2">Warenkorb</h2>
-                    <ul class="slider-menu toggle_burger_menu " id="offBurgerMenu">
+                <div class="basket" id="besketResponsiveOff">
+                    <button class="basket-h2" onclick="openBasket()">Warenkorb</button>
+                    <ul class=" slider-menu toggle_burger_menu" id="offBurgerMenu">
                         <button class="close_button" onclick="toggleBurgerMenu()">x</button>
                         <li><button class="slider-link" onclick="loadCurrentSelection(0)">Pizza´s</button></li>
                         <li><button class="slider-link" onclick="loadCurrentSelection(1)">Bürger</button></li>
@@ -84,12 +84,18 @@
                     </ul>
                     <div class="amounts" id="amounts"></div>
                     <div class="dividing-line"></div>
+                    <p id="submitOrder" class="submit-text "></p>
                     <div class="sum" id="sum"></div>
                 </div>
             </aside>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
+            <li class="footer-text">Created by Radek</li>
+            <a class="mail-link" href="mailto:radekgnych@gmail.com" id="mail">
+                <li class="mail-link">E-Mail: radekgnych@gmail.com</li>
+            </a>
         </div>
     </footer>
 </body>

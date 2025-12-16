@@ -1,7 +1,12 @@
+html
+{
+    font-size: 62.5%;
+}
+
 h1
 {
     font-family: "Ubuntu", sans-serif;
-    font-size: 48px;
+    font-size: 4.8rem;
     margin: 0;
     color: var(--font-color-white);
     text-shadow: 4px 4px 3px rgb(49, 49, 49);
@@ -9,37 +14,37 @@ h1
 
 h2
 {
-    margin: 32px 0 32px 16px;
+
+    margin: 3.2rem 0 3.2rem 1.6rem;
     font-family: "Ubuntu", sans-serif;
-    font-size: 32px;
+    font-size: 3.2rem;
     white-space: nowrap;
+    color: rgba(10, 65, 77);
 }
 
 h3
 {
     font-family: "Ubuntu", sans-serif;
-    color: black;
+    color: rgba(10, 65, 77);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 span
 {
-    margin-left: px;
+    margin-left: 0;
     font-family: "Ubuntu", sans-serif;
-    font-size: 21px;
+    font-size: 2.1rem;
     color: var(--navbar-color);
 }
 
 ul
 {
-
-    padding: 8px;
+    padding: 0.8rem;
 }
 
 li
 {
     font-family: "Ubuntu", sans-serif;
     white-space: nowrap;
-
 }

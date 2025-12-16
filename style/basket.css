@@ -18,17 +18,17 @@ aside
     box-sizing: border-box;
     flex-shrink: 0;
     margin: 0;
-    width: 350px;
+    width: 35.0rem;
 }
 
 .basket
 {
     display: flex;
     flex-direction: column;
-    padding-right: 16px;
-    padding-left: 32px;
-    min-width: 350px;
-    max-height: 85vh;
+    padding-right: 1.6rem;
+    padding-left: 3.2rem;
+    min-width: 35.0rem;
+    height: 80vh;
     position: sticky;
     top: 0;
     border-style: solid;
@@ -45,15 +45,29 @@ aside
     width: 97%;
     display: flex;
     justify-content: center;
-    padding-top: 16px;
-    padding-bottom: 19px;
+    padding-top: 1.6rem;
+    padding-bottom: 1.9rem;
     margin: 0;
     box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    background-color: rgba(10, 65, 77);
+    color: var(--font-color-white);
+    border: none;
+    font-size: 3.2rem;
+}
+
+.basket-h2:hover
+{
+    transform: scale(1.03);
+}
+
+.basket-h2:active
+{
+    transform: scale(0.99);
 }
 
 .basket-price
 {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--font-color-black);
     white-space: nowrap;
 }
@@ -62,9 +76,9 @@ aside
 {
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
+    margin-top: 3.2rem;
     font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     flex: 1;
     overflow-y: auto;
 }
@@ -72,7 +86,7 @@ aside
 .button-minus-basket
 {
     font-family: "Ubuntu", sans-serif;
-    font-size: 36px;
+    font-size: 3.6rem;
     color: var(--navbar-color);
     border: none;
     background-color: var(--font-color-white);
@@ -85,13 +99,13 @@ aside
 
 .button-minus-basket:active
 {
-    transform: translateY(3px);
+    transform: translateY(0.3rem);
 }
 
 .button-plus-basket
 {
     font-family: "Ubuntu", sans-serif;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: var(--navbar-color);
     border: none;
     background-color: var(--font-color-white);
@@ -104,32 +118,32 @@ aside
 
 .button-plus-basket:active
 {
-    transform: translateY(3px);
+    transform: translateY(0.3rem);
 }
 
 .amount-plus-minus
 {
     display: flex;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 0.8rem;
     align-items: center;
-    margin-top: 8px;
-    margin-bottom: 16px;
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
     font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
-    padding-left: 16px;
+    font-size: 1.6rem;
+    padding-left: 1.6rem;
 }
 
 p.dish-title
 {
     margin: 0;
-    font-size: 16px;
-    padding-left: 16px;
+    font-size: 1.6rem;
+    padding-left: 1.6rem;
 }
 
 .trash
 {
-    padding-left: 16px;
+    padding-left: 1.6rem;
 }
 
 .trash-button
@@ -137,7 +151,7 @@ p.dish-title
     border: none;
     background-color: var(--font-color-white);
     color: var(--navbar-color);
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .trash-button:hover
@@ -147,34 +161,35 @@ p.dish-title
 
 .trash-button:active
 {
-    transform: translateY(3px);
+    transform: translateY(0.3rem);
 }
 
 .dividing-line
 {
-    margin-top: 50px;
+    margin-top: 5.0rem;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0.1rem;
     border-color: var(--border-color);
-    width: 250px;
-    margin-left: 6px;
+    width: 25.0rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
 }
 
 .sum
 {
-    padding-top: 24px;
+    padding-top: 2.4rem;
     font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .price-total
 {
     display: flex;
     flex-direction: column;
-    gap: 8spx;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 16px;
+    gap: 0.8rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: 0.8rem;
 }
 
 .subtotal,
@@ -183,39 +198,72 @@ p.dish-title
 {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 6px;
+    padding-bottom: 0.6rem;
 }
 
 .p-total
 {
     font-family: "Ubuntu", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--font-color-black);
     margin: 0;
 }
 
 .span-basket
 {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-family: "Ubuntu", sans-serif;
     color: var(--font-color-black);
 }
 
 .submit-button
 {
-    margin-top: 16px;
+    margin-top: 1.6rem;
     box-shadow: 4px 4px 4px rgb(49, 49, 49);
     border-style: none;
-    background-color: green;
+    background-color: rgba(10, 65, 77);
     font-family: "Ubuntu", sans-serif;
     color: var(--font-color-white);
     cursor: pointer;
-    height: 32px;
-    border-radius: 3px;
-    font-size: 16px;
+    height: 3.2rem;
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
 }
 
 .submit-button:active
 {
     transform: scale(0.97);
+}
+
+.submit-text
+{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.6rem;
+    color: rgba(10, 65, 77);
+    font-weight: bold;
+    padding-left: 1.6rem;
+    margin: 0;
+}
+
+
+.basket-responsive-button
+{
+    display: none;
+    color: var(--font-color-white);
+    background-color: rgba(10, 65, 77);
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 3px;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.basket-responsive-button:hover
+{
+    transform: scale(1.02);
+}
+
+.basket-responsive-button:active
+{
+    transform: scale(0.99);
 }

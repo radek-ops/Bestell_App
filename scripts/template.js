@@ -15,7 +15,7 @@ function getCurrentDishes(entireSelection, j) {
                           <span class="dish-price" id="dishPrice">Preis: ${entireSelection.price.toFixed(2).replace(".", ",")} €</span >
                         </div> 
                         <button id="plusDish" class="plus-button" type="button"
-                        onclick="addToBasket('${entireSelection.name}', ${parseFloat(entireSelection.price)}, ${j})">+</button>                                       
+                        onclick="addToBasket('${entireSelection.name}', ${parseFloat(entireSelection.price)})">+</button>                                       
                 </div >`;
 }
 
@@ -34,7 +34,7 @@ function showAmounts(dishName, toPay, i, counterCalc) {
 }
 
 
-function showTotalCalculate(net, sum) {
+function showTotalCalculate(net, sum, i) {
     return ` <div class="price-total">
                     <div class ="subtotal">
                      <p class="p-total">Netto:</p><span class="span-basket">${net.toFixed(2).replace(".", ",") + ' €'}</span>
@@ -48,6 +48,6 @@ function showTotalCalculate(net, sum) {
                          <div class="total">
                        <b>Gesamt:</b><b>${sum.toFixed(2).replace(".", ",") + ' €'}</b>
                    </div>
-                   <button id="submit" type="submit" class="submit-button">Bestellung Senden</button>
+                   <button id="submit" type="submit" class="submit-button" onclick="submitOrder(${i})">Bestellung Senden</button>
               </div>`;
 }
