@@ -8,7 +8,6 @@ let amounts = document.getElementById('amounts');
 let sentOrder = document.getElementById('submitOrder');
 let currentDishes = '';
 
-
 function init() {
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';
@@ -94,7 +93,6 @@ function minusDischNewPrice(i, singelPrice) {
     calculate(allamounts, 3.50);
 }
 
-
 function afterMinusLastDisch(i) {
     allNames.splice(i, 1);
     allamounts.splice(i, 1);
@@ -102,7 +100,6 @@ function afterMinusLastDisch(i) {
     updateBasket();
     calculate(allamounts, 3.50);
 }
-
 
 function plusDishesInBasket(i) {
     let singelPrice = allSingelPrices[i];
@@ -139,7 +136,6 @@ function calculate(allamounts, deliverPrice, i) {
     calculateTaxAndDeliver(net, deliverPrice, i);
 }
 
-
 function calculateTaxAndDeliver(net, deliverPrice, i) {
     let deliver = deliverPrice;
     let taxCal = net * (7 / 100);
@@ -149,10 +145,10 @@ function calculateTaxAndDeliver(net, deliverPrice, i) {
 }
 
 function toggleBurgerMenu() {
-    let onBurgerButton = document.getElementById("onBurgerMenu")
-    let offBurgerButton = document.getElementById("offBurgerMenu")
-    onBurgerButton.classList.toggle('toggle_burger_menu');
-    offBurgerButton.classList.toggle('toggle_burger_menu');
+    let onBurgerButton = document.getElementById("onQuickMenu")
+    let offBurgerButton = document.getElementById("offQuickMenu")
+    onBurgerButton.classList.toggle('toggle_quick_menu');
+    offBurgerButton.classList.toggle('toggle_quick_menu');
     quikMenuScroll();
 }
 
@@ -202,8 +198,6 @@ function playSound() {
     ifeelfgood.play();
 }
 
-
-
 function submitOrder() {
     if (allamounts && allNames == 0) {
         sentOrder.innerHTML = 'Bitte erst eine Bestellung aufgeben!';
@@ -217,8 +211,9 @@ function submitOrder() {
     }
 }
 
-
 function openBasket() {
-    document.getElementById("besketResponsiveOn").classList.toggle("basket");
-    document.getElementById("besketResponsiveOff").classList.toggle("basket");
+    document.getElementById("basketResponsiveOn").classList.toggle("basket-on");
+    document.getElementById("basketResponsiveOff").classList.toggle("basket-on");
+    document.getElementById("continue").innerHTML = 'Weiter einkaufen';
 }
+

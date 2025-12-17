@@ -6,7 +6,6 @@ function loadDishes(i) {
             </button>`;
 }
 
-
 function getCurrentDishes(entireSelection, j) {
     return `<div class="card" id="menucard${j}">
                        <div class="menu-card">
@@ -18,7 +17,6 @@ function getCurrentDishes(entireSelection, j) {
                         onclick="addToBasket('${entireSelection.name}', ${parseFloat(entireSelection.price)})">+</button>                                       
                 </div >`;
 }
-
 
 function showAmounts(dishName, toPay, i, counterCalc) {
     return `<div class="besket"><p class="dish-title">${dishName}</p>
@@ -32,7 +30,6 @@ function showAmounts(dishName, toPay, i, counterCalc) {
                </div>
             </div>`;
 }
-
 
 function showTotalCalculate(net, sum, i) {
     return ` <div class="price-total">

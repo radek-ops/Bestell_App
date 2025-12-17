@@ -3,7 +3,7 @@ html
     font-size: 62.5%;
 }
 
-.burger
+.quick-button
 {
     display: flex;
     flex-direction: column;
@@ -16,14 +16,15 @@ html
     background-color: var(--navbar-color);
     gap: 0.8rem;
     cursor: pointer;
+    margin-right: 1.1rem;
 }
 
-.burger:hover
+.quick-button:hover
 {
     transform: scale(1.1);
 }
 
-.burger-stack
+.quick-stack
 {
     height: 0.8rem;
     border-radius: 0.8rem 0 0.8rem 0;
@@ -33,7 +34,7 @@ html
     font-weight: bold;
 }
 
-.burger-menu:active
+.quick-menu:active
 {
     display: flex;
     justify-content: center;
@@ -56,12 +57,12 @@ html
     color: var(--navbar-color);
 }
 
-.toggle_burger_menu
+.toggle_quick_menu
 {
     display: none;
 }
 
-.slider-menu:not(.toggle_burger_menu)
+.slider-menu:not(.toggle_quick_menu)
 {
     transform: translateX(0);
     opacity: 1;

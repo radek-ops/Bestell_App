@@ -53,17 +53,9 @@ aside
     color: var(--font-color-white);
     border: none;
     font-size: 3.2rem;
+    pointer-events: none;
 }
 
-.basket-h2:hover
-{
-    transform: scale(1.03);
-}
-
-.basket-h2:active
-{
-    transform: scale(0.99);
-}
 
 .basket-price
 {
@@ -245,9 +237,11 @@ p.dish-title
     margin: 0;
 }
 
-
 .basket-responsive-button
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
     color: var(--font-color-white);
     background-color: rgba(10, 65, 77);
