@@ -26,7 +26,7 @@
                 <img class="img-logos-nav" src="./img/android-chrome-192x192.png" alt="Logo-Bestell-App">
                 <h1>Bestellando</h1>
             </div>
-            <div class="quick-menu" onclick="toggleBurgerMenu()">
+            <div class="quick-menu" onclick="toggleQuickMenu()">
                 <button type="button" class="quick-button" id="onQuickMenu">
                     <div class="quick-stack">Quick</div>
                     <div class="quick-stack">Menü</div>
@@ -70,19 +70,22 @@
                 <div class="basket" id="basketResponsiveOff">
                     <button id="continue" class="basket-h2" onclick="openBasket()">Warenkorb</button>
                     <ul class=" slider-menu toggle_quick_menu" id="offQuickMenu">
-                        <button class="close_button" onclick="toggleBurgerMenu()">x</button>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(0)">Pizza´s</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(1)">Bürger</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(2)">Döner</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(3)">Chicken</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(4)">Salate</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(5)">Extras</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(6)">Beilagen</button></li>
-                        <li><button class="slider-link" onclick="loadCurrentSelection(7)">Soßen</button></li>
+                        <button class="close_button" onclick="toggleQuickMenu()">x</button>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(0)">Pizza´s</button>
+                        </li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(1)">Bürger</button></li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(2)">Döner</button></li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(3)">Chicken</button>
+                        </li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(4)">Extras</button></li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(5)">Salate</button></li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(6)">Beilagen</button>
+                        </li>
+                        <li><button class="slider-link" onclick="allCurrentDishesSelectionArray(7)">Soßen</button></li>
                     </ul>
                     <div class="amounts" id="amounts"></div>
-                    <div class="dividing-line"></div>
                     <p id="submitOrder" class="submit-text "></p>
+                    <div class="dividing-line"></div>
                     <div class="sum" id="sum"></div>
                 </div>
             </aside>

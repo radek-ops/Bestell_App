@@ -50,6 +50,7 @@ html
     color: var(--font-color-white);
     font-family: "Ubuntu", sans-serif;
     font-size: 1.6rem;
+    cursor: pointer;
 }
 
 .slider-link:hover
@@ -106,4 +107,5 @@ html
     transform: translateX(800%);
     list-style: none;
     z-index: 3;
+
 }

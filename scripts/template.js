@@ -1,13 +1,13 @@
-function loadDishes(i) {
-    return `<button class="button-main-menus" type="button" onclick="loadCurrentSelection(${i})">
+function tplRenderMainDishes(i) {
+    return `<button class="button-main-menus" type="button" onclick="allCurrentDishesSelectionArray(${i})">
                 <div class="main-card" id="card${i}">
                  <h3>${allDishesArry[i].title}</h3>
                </div>
             </button>`;
 }
 
-function getCurrentDishes(entireSelection, j) {
-    return `<div class="card" id="menucard${j}">
+function tplShowCurrentDishesSelectionArray(entireSelection, j) {
+    return `<div class="card" id="menuCard${j}">
                        <div class="menu-card">
                           <span class="dish-title" >${entireSelection.name}</span>
                           <span class="dish-description" >${entireSelection.description}</span>
@@ -18,7 +18,7 @@ function getCurrentDishes(entireSelection, j) {
                 </div >`;
 }
 
-function showAmounts(dishName, toPay, i, counterCalc) {
+function tplShowAmounts(dishName, toPay, i, counterCalc) {
     return `<div class="besket"><p class="dish-title">${dishName}</p>
                 <div class="amount-plus-minus">
                  <button onclick="minusDishesInBasket(${i})" class="button-minus-basket" type="button" >-</button>
@@ -31,7 +31,7 @@ function showAmounts(dishName, toPay, i, counterCalc) {
             </div>`;
 }
 
-function showTotalCalculate(net, sum, i) {
+function tplShowTotalCalculate(net, sum, i) {
     return ` <div class="price-total">
                     <div class ="subtotal">
                      <p class="p-total">Netto:</p><span class="span-basket">${net.toFixed(2).replace(".", ",") + ' €'}</span>

@@ -9,53 +9,62 @@ let sentOrder = document.getElementById('submitOrder');
 let currentDishes = '';
 
 function init() {
+    /*  The website always starts at the top when reloaded. 
+        anchors in some functions, for example in scrollToFirstDish() */
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';
     }
     window.scrollTo(0, 0);
-    createDishArry();
-    calculate(allamounts, 0);
+
+    createDishesArray();
+    calculateTotalAmount(allamounts, 0);
 }
 
-function createDishArry() {
+function createDishesArray() {
     showDishes.innerHTML = '';
     allDishesArry = allDishes.filter((createArry) => { return createArry['dish'] });
-    dishArry();
+    mainDishesArray();
 }
 
-function dishArry() {
+function mainDishesArray() {
     for (let i = 0; i < allDishesArry.length; i++) {
-        const selection = loadDishes(i);
+        const selection = tplRenderMainDishes(i);
         showDishes.innerHTML += selection;
     }
 }
 
-function loadCurrentSelection(i) {
+function allCurrentDishesSelectionArray(i) {
     showDishes.innerHTML = '';
     for (let j = 0; j < allDishes[i].selection.length; j++) {
         const entireSelection = allDishes[i].selection[j];
-        getCurrentSelections(entireSelection);
+        currentDishes = tplShowCurrentDishesSelectionArray(entireSelection, j);
+        showDishes.innerHTML += currentDishes;
+        scrollToFirstDish();
     }
 }
 
-function getCurrentSelections(entireSelection) {
-    currentDishes = getCurrentDishes(entireSelection);
-    showDishes.innerHTML += currentDishes;
+function scrollToFirstDish() {
+    setTimeout(function () {
+        document.querySelector('#menuCard0').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }, 200);
+
 }
 
 function addToBasket(dishName, toPay) {
     sentOrder.innerHTML = '';
     let index = allNames.indexOf(dishName);
     if (index === -1) {
-        pushArrys(dishName, toPay);
+        pushArrays(dishName, toPay);
     } else {
         allamounts[index] += toPay;
     }
     updateBasket();
-    calculate(allamounts, 3.50);
+    calculateTotalAmount(allamounts, 3.50);
 }
 
-function pushArrys(dishName, toPay) {
+function pushArrays(dishName, toPay) {
     allNames.push(dishName);
     allamounts.push(toPay);
     allSingelPrices.push(toPay);
@@ -71,50 +80,50 @@ function updateBasket() {
 
 function calculateCounter(i, singelPrice,) {
     let counterCalc = Math.round(allamounts[i] / singelPrice);
-    amounts.innerHTML += showAmounts(allNames[i], allamounts[i], i, counterCalc);
+    amounts.innerHTML += tplShowAmounts(allNames[i], allamounts[i], i, counterCalc);
 }
 
 function minusDishesInBasket(i) {
     let singelPrice = allSingelPrices[i];
     if (allamounts[i] > singelPrice) {
-        minusDischNewPrice(i, singelPrice);
+        minusDishNewPrice(i, singelPrice);
 
     } else if (allamounts[i] <= allSingelPrices) {
-        calculate(allamounts, 0);
+        calculateTotalAmount(allamounts, 0);
         deleteCompletely(i);
     } else {
-        afterMinusLastDisch(i)
+        afterMinusLastDish(i);
     }
 }
 
-function minusDischNewPrice(i, singelPrice) {
+function minusDishNewPrice(i, singelPrice) {
     allamounts[i] -= singelPrice;
     updateBasket();
-    calculate(allamounts, 3.50);
+    calculateTotalAmount(allamounts, 3.50);
 }
 
-function afterMinusLastDisch(i) {
+function afterMinusLastDish(i) {
     allNames.splice(i, 1);
     allamounts.splice(i, 1);
     allSingelPrices.splice(i, 1);
     updateBasket();
-    calculate(allamounts, 3.50);
+    calculateTotalAmount(allamounts, 3.50);
 }
 
 function plusDishesInBasket(i) {
     let singelPrice = allSingelPrices[i];
     if (allamounts[i] >= singelPrice) {
-        plusDischNewPrice(i, singelPrice)
+        plusDishNewPrice(i, singelPrice)
     } else {
         return;
     }
 }
 
-function plusDischNewPrice(i, singelPrice) {
+function plusDishNewPrice(i, singelPrice) {
     allamounts[i] += singelPrice;
     allamounts[i] > singelPrice;
     updateBasket();
-    calculate(allamounts, 3.50, i);
+    calculateTotalAmount(allamounts, 3.50, i);
 
 }
 
@@ -123,12 +132,12 @@ function deleteCompletely(i) {
     allamounts.splice(i, 1);
     allSingelPrices.splice(i, 1);
     updateBasket();
-    calculate(allamounts, 0);
+    calculateTotalAmount(allamounts, 0);
     sentOrder.innerHTML = '';
 
 }
 
-function calculate(allamounts, deliverPrice, i) {
+function calculateTotalAmount(allamounts, deliverPrice, i) {
     let net = 0;
     for (let i = 0; i < allamounts.length; i++) {
         net += allamounts[i];
@@ -140,11 +149,11 @@ function calculateTaxAndDeliver(net, deliverPrice, i) {
     let deliver = deliverPrice;
     let taxCal = net * (7 / 100);
     let sum = net + taxCal + deliver;
-    sumtotal.innerHTML = showTotalCalculate(net, sum, i);
+    sumtotal.innerHTML = tplShowTotalCalculate(net, sum, i);
 
 }
 
-function toggleBurgerMenu() {
+function toggleQuickMenu() {
     let onBurgerButton = document.getElementById("onQuickMenu")
     let offBurgerButton = document.getElementById("offQuickMenu")
     onBurgerButton.classList.toggle('toggle_quick_menu');
@@ -166,7 +175,7 @@ function quikMenuScroll() {
 }
 
 function scrollMainDishes() {
-    dishArry();
+    createDishesArray();
     setTimeout(function () {
         document.querySelector('#card0').scrollIntoView({
             behavior: 'smooth'
@@ -180,7 +189,7 @@ function scrollMainDishes() {
 }
 
 function scrollSideDishes() {
-    dishArry();
+    createDishesArray();
     setTimeout(function () {
         document.querySelector('footer').scrollIntoView({
             behavior: 'smooth'
@@ -206,7 +215,7 @@ function submitOrder() {
         allamounts.length = 0;
         allSingelPrices.length = 0;
         updateBasket();
-        calculate(allamounts, 0);
+        calculateTotalAmount(allamounts, 0);
         sentOrder.innerHTML = 'Bestellung gesendet!';
     }
 }
