@@ -1,0 +1,307 @@
+[debug] [2026-01-04T20:26:51.186Z] ----------------------------------------------------------------------
+[debug] [2026-01-04T20:26:51.187Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2026-01-04T20:26:51.188Z] CLI Version:   15.1.0
+[debug] [2026-01-04T20:26:51.188Z] Platform:      linux
+[debug] [2026-01-04T20:26:51.188Z] Node Version:  v22.16.0
+[debug] [2026-01-04T20:26:51.188Z] Time:          Sun Jan 04 2026 21:26:51 GMT+0100 (Mitteleuropäische Normalzeit)
+[debug] [2026-01-04T20:26:51.188Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/radek/277218D959ADE4B7/Dev-Akademi/Bestell_App
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-01-04T20:26:57.875Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-04T20:26:57.875Z] > authorizing via signed-in user (radek.network@gmail.com)
+[debug] [2026-01-04T20:29:00.930Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:29:00.930Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:29:00.931Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:29:00.931Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"Meine-Bestell-App-2026"}
+[debug] [2026-01-04T20:29:01.202Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-01-04T20:29:01.202Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"meine-bestell-app-2026"}
+[debug] [2026-01-04T20:30:05.957Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:05.958Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:05.960Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:30:05.960Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"RadCode-Bestellando-2026"}
+[debug] [2026-01-04T20:30:06.298Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-01-04T20:30:06.298Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"radcode-bestellando-2026"}
+[debug] [2026-01-04T20:30:33.160Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:33.160Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:33.160Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:30:33.160Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"rad-ops-bestellando-2026"}
+[debug] [2026-01-04T20:30:33.374Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-01-04T20:30:33.374Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_AVAILABLE","suggestedProjectId":"rad-ops-bestellando-2026"}
+[debug] [2026-01-04T20:30:51.837Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:51.837Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:51.837Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-01-04T20:30:51.837Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"rad-ops-bestellando-2026","name":"rad-ops-bestellando-2026"}
+[debug] [2026-01-04T20:30:52.721Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2026-01-04T20:30:52.722Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.4876600497468924621"}
+[debug] [2026-01-04T20:30:52.725Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:52.726Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:30:52.726Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4876600497468924621 [none]
+[debug] [2026-01-04T20:30:53.431Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4876600497468924621 200
+[debug] [2026-01-04T20:30:53.432Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.4876600497468924621 {"name":"operations/create_project.global.4876600497468924621","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2026-01-04T20:30:53.437Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/usr/local/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createCloudProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:227:29)
+    at async createFirebaseProjectAndLog (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:87:9)
+    at async Object.doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/project.js:65:24)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:82:13)
+    at async Command.initAction [as actionFn] (/usr/local/lib/node_modules/firebase-tools/lib/commands/init.js:225:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2026-01-04T20:35:22.626Z] ----------------------------------------------------------------------
+[debug] [2026-01-04T20:35:22.627Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2026-01-04T20:35:22.627Z] CLI Version:   15.1.0
+[debug] [2026-01-04T20:35:22.627Z] Platform:      linux
+[debug] [2026-01-04T20:35:22.628Z] Node Version:  v22.16.0
+[debug] [2026-01-04T20:35:22.628Z] Time:          Sun Jan 04 2026 21:35:22 GMT+0100 (Mitteleuropäische Normalzeit)
+[debug] [2026-01-04T20:35:22.628Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/radek/1c93641c-7c53-42b1-85ee-b488e98adef5/Dev-Akademi/Bestell_App
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-01-04T20:35:37.767Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-04T20:35:37.767Z] > authorizing via signed-in user (radek.network@gmail.com)
+[debug] [2026-01-04T20:36:01.734Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:01.735Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:01.736Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:36:01.736Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"rad-ops-Bestallando-2026"}
+[debug] [2026-01-04T20:36:01.995Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-01-04T20:36:01.996Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"rad-ops-bestallando-2026"}
+[debug] [2026-01-04T20:36:06.091Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:06.091Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:06.094Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:36:06.095Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"rad-ops-Bestallando-2026"}
+[debug] [2026-01-04T20:36:06.400Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-01-04T20:36:06.400Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"rad-ops-bestallando-2026"}
+[debug] [2026-01-04T20:36:31.322Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:31.323Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:31.325Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:36:31.325Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"radOpsBestalland_2026"}
+[debug] [2026-01-04T20:36:31.434Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2026-01-04T20:36:31.434Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2026-01-04T20:36:31.437Z] Couldn't check if project ID radOpsBestalland_2026 is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2026-01-04T20:36:33.267Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:33.268Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:36:33.269Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-01-04T20:36:33.269Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"radOpsBestalland_2026","name":"radOpsBestalland_2026"}
+[debug] [2026-01-04T20:36:33.989Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2026-01-04T20:36:33.989Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2026-01-04T20:36:33.993Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2026-01-04T20:40:29.166Z] ----------------------------------------------------------------------
+[debug] [2026-01-04T20:40:29.167Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2026-01-04T20:40:29.168Z] CLI Version:   15.1.0
+[debug] [2026-01-04T20:40:29.168Z] Platform:      linux
+[debug] [2026-01-04T20:40:29.168Z] Node Version:  v22.16.0
+[debug] [2026-01-04T20:40:29.168Z] Time:          Sun Jan 04 2026 21:40:29 GMT+0100 (Mitteleuropäische Normalzeit)
+[debug] [2026-01-04T20:40:29.168Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/radek/Dev/Dev-Akademi/Bestell_App
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-01-04T20:40:36.767Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-04T20:40:36.768Z] > authorizing via signed-in user (radek.network@gmail.com)
+[debug] [2026-01-04T20:41:39.658Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:41:39.659Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:41:39.660Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-01-04T20:41:39.660Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"Rad_opsBestallando2026"}
+[debug] [2026-01-04T20:41:39.834Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2026-01-04T20:41:39.834Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2026-01-04T20:41:39.837Z] Couldn't check if project ID Rad_opsBestallando2026 is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2026-01-04T20:41:41.258Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:41:41.258Z] Checked if tokens are valid: true, expires at: 1767561237915
+[debug] [2026-01-04T20:41:41.259Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-01-04T20:41:41.259Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"Rad_opsBestallando2026","name":"Rad_opsBestallando2026"}
+[debug] [2026-01-04T20:41:41.998Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2026-01-04T20:41:41.999Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2026-01-04T20:41:42.004Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2026-01-04T20:42:32.231Z] ----------------------------------------------------------------------
+[debug] [2026-01-04T20:42:32.234Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init hosting
+[debug] [2026-01-04T20:42:32.234Z] CLI Version:   15.1.0
+[debug] [2026-01-04T20:42:32.235Z] Platform:      linux
+[debug] [2026-01-04T20:42:32.235Z] Node Version:  v22.16.0
+[debug] [2026-01-04T20:42:32.235Z] Time:          Sun Jan 04 2026 21:42:32 GMT+0100 (Mitteleuropäische Normalzeit)
+[debug] [2026-01-04T20:42:32.235Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/radek/Dev/Dev-Akademi/Bestell_App
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-01-04T20:51:33.892Z] Error: setRawMode EIO
+    at ReadStream.setRawMode (node:tty:81:24)
+    at [_setRawMode] [as _setRawMode] (node:internal/readline/interface:377:18)
+    at Interface.close (node:internal/readline/interface:527:24)
+    at ReadStream.ontermend (node:internal/readline/interface:263:10)
+    at ReadStream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.894Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.895Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.895Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.895Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.896Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.896Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-01-04T20:51:33.896Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:971:11)
+    at Socket._write (node:net:983:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
