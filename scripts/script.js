@@ -202,7 +202,7 @@ function scrollSideDishes() {
     }, 200);
 }
 
-let ifeelfgood = new Audio('/sounds/james-brown-i-feel-good.mp3')
+let ifeelfgood = new Audio('./sounds/james-brown-i-feel-good.mp3')
 function playSound() {
     ifeelfgood.play();
 }

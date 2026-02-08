@@ -124,7 +124,7 @@ main
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url('./img/food-7098703_1920.jpg');
+    background-image: url('.style/img/food-7098703_1920.jpg');
     background-size: cover;
     background-position: center;
     object-fit: cover;
